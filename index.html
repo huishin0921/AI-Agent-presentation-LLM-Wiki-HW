@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents 基礎教學</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css">
+    <style>
+        .reveal h2 { color: #2c3e50; font-family: '微軟正黑體', sans-serif; font-weight: bold; }
+        .reveal p, .reveal li { font-family: '微軟正黑體', sans-serif; font-size: 0.9em; line-height: 1.5; color: #34495e; }
+        .highlight { color: #e74c3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- 封面 -->
+            <section>
+                <h2>認識 AI Agent</h2>
+                <p>什麼是智慧代理人？它和 ChatGPT 有何不同？</p>
+                <p><small>向右滑動開始學習 👉</small></p>
+            </section>
+            
+            <!-- 內容頁 1 -->
+            <section>
+                <h2>1. 什麼是 AI Agent？</h2>
+                <ul>
+                    <li>以大型語言模型 (LLM) 為<span class="highlight">大腦</span>。</li>
+                    <li>不僅能對話，還能理解目標並<span class="highlight">自主採取行動</span>。</li>
+                </ul>
+            </section>
+
+            <!-- 內容頁 2 -->
+            <section>
+                <h2>2. 思考與規劃</h2>
+                <ul>
+                    <li>利用思維鏈 (Chain of Thought) 拆解複雜任務。</li>
+                    <li>具備自我反思與修正錯誤的能力。</li>
+                </ul>
+            </section>
+
+            <!-- 內容頁 3 -->
+            <section>
+                <h2>3. 記憶機制</h2>
+                <ul>
+                    <li><strong>短期記憶：</strong>記住當下的對話上下文。</li>
+                    <li><strong>長期記憶：</strong>運用知識庫 (Wiki) 記住過往經驗。</li>
+                </ul>
+            </section>
+
+            <!-- 內容頁 4 -->
+            <section>
+                <h2>4. 使用外部工具</h2>
+                <ul>
+                    <li>突破 LLM 的限制，能<span class="highlight">主動呼叫外部 API</span>。</li>
+                    <li>例如：網路搜尋、讀取檔案、撰寫與執行程式碼。</li>
+                </ul>
+            </section>
+
+            <!-- 內容頁 5 -->
+            <section>
+                <h2>5. 實際應用場景</h2>
+                <ul>
+                    <li>例如：打造專屬的「課堂 PPT 整理助手」。</li>
+                    <li>自動讀取簡報、濃縮重點，協助高效學習。</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true
+        });
+    </script>
+</body>
+</html>
