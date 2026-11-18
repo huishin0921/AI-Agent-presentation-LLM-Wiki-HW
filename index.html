@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css">
     <style>
         .reveal h2 { color: #2c3e50; font-family: '微軟正黑體', sans-serif; font-weight: bold; }
-        .reveal p, .reveal li { font-family: '微軟正黑體', sans-serif; font-size: 0.9em; line-height: 1.5; color: #34495e; }
+        .reveal h3 { color: #34495e; font-family: '微軟正黑體', sans-serif; }
+        .reveal p, .reveal li { font-family: '微軟正黑體', sans-serif; font-size: 0.9em; line-height: 1.6; color: #34495e; }
         .highlight { color: #e74c3c; font-weight: bold; }
+        .box { background: #f8f9fa; border-left: 5px solid #3498db; padding: 20px; border-radius: 5px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -17,54 +19,97 @@
         <div class="slides">
             <!-- 封面 -->
             <section>
-                <h2>認識 AI Agent</h2>
-                <p>什麼是智慧代理人？它和 ChatGPT 有何不同？</p>
-                <p><small>向右滑動開始學習 👉</small></p>
+                <h2>AI Agents</h2>
+                <h3>智慧代理人的基礎與應用</h3>
+                <p>從「對話機器人」到「能辦事的數位助手」</p>
+                <p><small>向右滑動開始 👉</small></p>
             </section>
             
             <!-- 內容頁 1 -->
             <section>
                 <h2>1. 什麼是 AI Agent？</h2>
+                <div class="box">
+                    <p>AI Agent 是一個以<strong>大型語言模型 (LLM)</strong> 為大腦的系統。</p>
+                </div>
                 <ul>
-                    <li>以大型語言模型 (LLM) 為<span class="highlight">大腦</span>。</li>
-                    <li>不僅能對話，還能理解目標並<span class="highlight">自主採取行動</span>。</li>
+                    <li>不僅能像 ChatGPT 一樣跟你對話。</li>
+                    <li>更能理解目標、自主拆解任務。</li>
+                    <li>能夠在虛擬環境中<span class="highlight">採取行動</span>來達成目的。</li>
                 </ul>
             </section>
 
             <!-- 內容頁 2 -->
             <section>
-                <h2>2. 思考與規劃</h2>
+                <h2>2. 核心架構</h2>
+                <p>一個完整的 Agent 通常包含三個核心要素：</p>
                 <ul>
-                    <li>利用思維鏈 (Chain of Thought) 拆解複雜任務。</li>
-                    <li>具備自我反思與修正錯誤的能力。</li>
+                    <li><strong>大腦 (Brain)：</strong>負責思考、推理與規劃 (LLM)。</li>
+                    <li><strong>感知 (Perception)：</strong>接收指令與理解環境狀態。</li>
+                    <li><strong>行動 (Action)：</strong>呼叫工具執行任務。</li>
                 </ul>
             </section>
 
             <!-- 內容頁 3 -->
             <section>
-                <h2>3. 記憶機制</h2>
+                <h2>3. 思考與規劃 (Planning)</h2>
                 <ul>
-                    <li><strong>短期記憶：</strong>記住當下的對話上下文。</li>
-                    <li><strong>長期記憶：</strong>運用知識庫 (Wiki) 記住過往經驗。</li>
+                    <li>利用<strong>思維鏈 (Chain of Thought)</strong> 拆解複雜任務。</li>
+                    <li>面對龐大的問題，它會將其切分成多個小步驟 (A → B → C)。</li>
+                    <li>具備<span class="highlight">自我反思 (Reflection)</span> 與修正錯誤的能力。</li>
                 </ul>
             </section>
 
             <!-- 內容頁 4 -->
             <section>
-                <h2>4. 使用外部工具</h2>
+                <h2>4. 記憶機制 (Memory)</h2>
+                <p>為了不「過目即忘」，Agent 具備兩種記憶：</p>
                 <ul>
-                    <li>突破 LLM 的限制，能<span class="highlight">主動呼叫外部 API</span>。</li>
-                    <li>例如：網路搜尋、讀取檔案、撰寫與執行程式碼。</li>
+                    <li><strong>短期記憶：</strong>記住當下的對話上下文，處理眼前任務。</li>
+                    <li><strong>長期記憶：</strong>透過外部資料庫 (如 LLM Wiki)，隨時檢索過去的知識與經驗。</li>
                 </ul>
             </section>
 
             <!-- 內容頁 5 -->
             <section>
-                <h2>5. 實際應用場景</h2>
+                <h2>5. 使用工具 (Tools)</h2>
+                <div class="box">
+                    <p>Agent 最強大的能力在於「長出了手腳」。</p>
+                </div>
                 <ul>
-                    <li>例如：打造專屬的「課堂 PPT 整理助手」。</li>
-                    <li>自動讀取簡報、濃縮重點，協助高效學習。</li>
+                    <li>突破 LLM 無法連網或計算的限制。</li>
+                    <li>主動呼叫 API 進行：網路搜尋、讀取本地檔案。</li>
+                    <li>甚至能自動寫 Python 程式碼並執行出結果。</li>
                 </ul>
+            </section>
+
+            <!-- 內容頁 6 -->
+            <section>
+                <h2>6. 控制流程 (Loop / Graph)</h2>
+                <ul>
+                    <li>Agent 不只是一直線執行，而是具備<strong>迴圈 (Loop)</strong> 概念。</li>
+                    <li><strong>ReAct 模式：</strong>思考 (Reason) ➔ 行動 (Act) ➔ 觀察 (Observe) ➔ 重新思考。</li>
+                    <li>如果發生錯誤，它會退回上一步自我修正。</li>
+                </ul>
+            </section>
+
+            <!-- 內容頁 7 -->
+            <section>
+                <h2>7. 實際應用案例</h2>
+                <p><strong>專屬的「課堂 PPT 整理系統」</strong></p>
+                <ul>
+                    <li><strong>取得資料：</strong>自動讀取上課簡報與 PDF。</li>
+                    <li><strong>整理重點：</strong>透過 Agent 大腦濃縮關鍵字。</li>
+                    <li><strong>產生結果：</strong>自動排版成極簡網頁，大幅節省複習時間。</li>
+                </ul>
+            </section>
+
+            <!-- 結語 -->
+            <section>
+                <h2>8. 總結</h2>
+                <div class="box">
+                    <p>AI Agent 讓 AI 從「回答問題的百科全書」，進化成<span class="highlight">「自動解決問題的虛擬員工」</span>。</p>
+                </div>
+                <p><small>感謝聆聽！</small></p>
             </section>
         </div>
     </div>
@@ -74,7 +119,8 @@
             controls: true,
             progress: true,
             center: true,
-            hash: true
+            hash: true,
+            transition: 'slide' // 可換成 fade, convex, concave, zoom
         });
     </script>
 </body>
